@@ -8,7 +8,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract Benode is ERC20, ERC20Burnable, Pausable, Ownable {
     constructor() ERC20("Benode", "BND") {
-        _mint(msg.sender, 100 * 10 ** 18);
+        _mint(msg.sender, 100 * 10 ** decimals());
     }
 
     function pause() public onlyOwner {
@@ -29,5 +29,9 @@ contract Benode is ERC20, ERC20Burnable, Pausable, Ownable {
         override
     {
         super._beforeTokenTransfer(from, to, amount);
+    }
+
+    function getMyBalance() public view returns(uint256 myBalance) {
+        return balanceOf(msg.sender);
     }
 }
