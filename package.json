@@ -1,0 +1,27 @@
+{
+  "name": "smart-parking",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/thebinod7/smart-parking.git",
+  "author": "Binod Chaudhary <thebinod7@gmail.com>",
+  "license": "MIT",
+	"scripts": {
+		"test": "truffle test",
+		"coverage": "truffle run coverage",
+		"compile": "truffle compile",
+		"deploy:binance-testnet": "truffle deploy --network binanceTestnet",
+		"deploy:polygon-testnet": "truffle deploy --network polygonTestnet",
+		"verify:sample": "truffle run verify Greeter@{contract-address} --network binanceTestnet"
+	},
+  "devDependencies": {
+		"@openzeppelin/contracts": "^4.4.1",
+		"@truffle/hdwallet-provider": "^2.0.0",
+		"dotenv": "^10.0.0",
+		"prettier": "^2.5.1",
+		"prettier-plugin-solidity": "^1.0.0-beta.19",
+		"solidity-coverage": "^0.7.17",
+		"truffle": "^5.4.26",
+		"truffle-plugin-verify": "^0.5.20",
+		"web3": "^1.6.1"
+	}
+}
